@@ -45,11 +45,12 @@ class TenantForm(BootstrapMixin, CustomFieldForm):
     tags = TagField(
         required=False
     )
+    local_context_data = JSONField(required=False)
 
     class Meta:
         model = Tenant
         fields = [
-            'name', 'slug', 'group', 'description', 'comments', 'tags',
+            'name', 'slug', 'group', 'description', 'comments', 'tags', 'local_context_data'
         ]
         widgets = {
             'group': APISelect(
