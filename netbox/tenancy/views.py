@@ -5,6 +5,8 @@ from django.views.generic import View
 
 from circuits.models import Circuit
 from dcim.models import Site, Rack, Device, RackReservation
+from extras.views import ObjectConfigContextView
+
 from ipam.models import IPAddress, Prefix, VLAN, VRF
 from utilities.views import (
     BulkDeleteView, BulkEditView, BulkImportView, ObjectDeleteView, ObjectEditView, ObjectListView,
