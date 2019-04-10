@@ -84,6 +84,9 @@ class TenantView(View):
             'stats': stats,
         })
 
+class TenantConfigContextView(ObjectConfigContextView):
+    object_class = Device
+    base_template = 'tenant/device.html'
 
 class TenantCreateView(PermissionRequiredMixin, ObjectEditView):
     permission_required = 'tenancy.add_tenant'
