@@ -3,7 +3,7 @@ from django.db import models
 from django.urls import reverse
 from taggit.managers import TaggableManager
 
-from extras.models import CustomFieldModel
+from extras.models import CustomFieldModel, ConfigContextModel
 from utilities.models import ChangeLoggedModel
 
 
@@ -37,7 +37,7 @@ class TenantGroup(ChangeLoggedModel):
         )
 
 
-class Tenant(ChangeLoggedModel, CustomFieldModel):
+class Tenant(ChangeLoggedModel, ConfigContextModel, CustomFieldModel):
     """
     A Tenant represents an organization served by the NetBox owner. This is typically a customer or an internal
     department.
