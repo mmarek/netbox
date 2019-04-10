@@ -5,7 +5,7 @@ from taggit.forms import TagField
 from extras.forms import AddRemoveTagsForm, CustomFieldForm, CustomFieldBulkEditForm, CustomFieldFilterForm
 from utilities.forms import (
     APISelect, APISelectMultiple, BootstrapMixin, ChainedFieldsMixin, ChainedModelChoiceField, CommentField,
-    FilterChoiceField, SlugField,
+    FilterChoiceField, SlugField, JSONField,
 )
 from .models import Tenant, TenantGroup
 
