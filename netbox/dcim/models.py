@@ -1334,9 +1334,11 @@ class Device(ChangeLoggedModel, ConfigContextModel, CustomFieldModel):
         on_delete=models.PROTECT,
         related_name='instances'
     )
-    device_role = models.ForeignKey(
+    device_role = models.ManyToManyField(
         to='dcim.DeviceRole',
-        on_delete=models.PROTECT,
+        #related_name='+',
+        blank=False,
+  #      on_delete=models.PROTECT,
         related_name='devices'
     )
     tenant = models.ForeignKey(
