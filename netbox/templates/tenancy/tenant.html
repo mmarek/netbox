@@ -48,6 +48,9 @@
         <li role="presentation"{% if active_tab == 'changelog' %} class="active"{% endif %}>
             <a href="{% url 'tenancy:tenant_changelog' slug=tenant.slug %}">Changelog</a>
         </li>
+        <li role="presentation" {% if active_tab== 'config-context' %} class="active" {% endif %}>
+            <a href="{% url 'tenancy:tenant_configcontext' pk=tenant.pk %}">Config Context</a>
+        </li>
     </ul>
 {% endblock %}
 
